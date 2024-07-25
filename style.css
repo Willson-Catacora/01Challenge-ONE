@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+header {
+    background-color: #fcfbfb;
+    padding: 10px 20px;
+    color: #fff;
+}
+header img {
+    max-width: 150px; /* Ajustar el tamaño máximo del logo */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+div {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+div > div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+div > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #555;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
