@@ -6,8 +6,7 @@ body {
 }
 
 header {
-  background-color: #fff; /* Fondo blanco para el nav */
-  padding: 10px 20px;
+  background-color: #fff;
 }
 
 header img {
@@ -19,13 +18,13 @@ header img {
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
-  padding-left: 90px;
-  padding-right: 70px;
+  padding-left: 120px;
+  padding-right: 80px;
 }
 
 .div1,
 .div2 {
-  background-color: #fff; /* Fondo blanco para div1 y div2 */
+  background-color: #fff;
   padding: 20px;
   border-radius: 8px;
 }
@@ -36,39 +35,47 @@ header img {
   margin-right: 25px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */ /* Centra los contenidos horizontalmente */
 }
 
 .div2 {
   flex: 1;
   text-align: center;
-  box-shadow: -10px 8px 8px rgba(0, 0, 0, 0.295); /* Sombreado más notorio para div2 */
+  box-shadow: -10px 8px 8px rgba(0, 0, 0, 0.295);
 }
 
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ffffff; /* Borde sutil alrededor del textarea */
-  background-color: #fff; /* Fondo blanco para el textarea */
+  border: 1px solid #ffffff;
+  background-color: #fff;
   box-sizing: border-box;
-  resize: vertical; /* Permite redimensionar verticalmente */
-  font-size: 18px; /* Tamaño de fuente similar al h3 */
+  resize: vertical;
+  font-size: 20px;
   line-height: 1.5;
-  border-radius: 5px; /* Bordes redondeados */
-  color: #333; /* Color del texto */
-  font-family: Arial, sans-serif; /* Fuente similar a la del h3 */
-  margin-bottom: 10px; /* Espacio inferior */
+  border-radius: 5px;
+  color: #022e5e;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
 }
 
+textarea:focus {
+  border-color: #ffffff;
+  outline: none;
+}
+
+textarea::placeholder {
+  color: #022e5e;
+  font-size: 20px;
+  font-style: Arial, sans-serif;
+}
 .controls {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra los contenidos horizontalmente */
-  width: 100%; /* Hace que el contenedor ocupe todo el ancho del div1 */
+  width: 100%;
 }
 
 p {
-  margin: 0 0 10px; /* Espacio inferior */
+  margin: 0 0 10px;
   color: #666;
   font-size: 14px;
 }
@@ -76,48 +83,42 @@ p {
 .buttons {
   display: flex;
   padding-top: 10px;
-  justify-content: center; /* Centra los botones horizontalmente */
-  width: 100%; /* Hace que el contenedor ocupe todo el ancho del div1 */
+  width: 90%;
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
-  margin: 0 5px; /* Espacio entre los botones */
-  border: none; /* Elimina el borde predeterminado de los botones */
-  width: auto; /* Ajusta el ancho automático según el contenido */
+  border-radius: 10px;
+  margin: 0 50px;
+  border: none;
+  width: 40%;
 }
 
 #encriptar {
-  background-color: #022e5e; /* Azul más oscuro */
+  background-color: #022e5e;
   color: white;
 }
 
 #encriptar:hover {
-  background-color: #004494; /* Azul más oscuro al pasar el ratón */
+  background-color: #087ef5;
 }
 
 #desencriptar {
-  background-color: #e0e0e0; /* Color plomo */
-  color: #022e5e; /* Texto azul */
-  border: 2px solid #022e5e; /* Borde azul */
+  background-color: #e0e0e0;
+  color: #022e5e;
+  border: 2px solid #022e5e;
 }
 
 #desencriptar:hover {
-  background-color: #c0c0c0; /* Color plomo más oscuro al pasar el ratón */
+  background-color: #087ef5;
+  color: white;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
-}
-
-h2 {
-  font-size: 20px;
-  color: #333;
   margin-bottom: 10px;
 }
 
@@ -130,4 +131,9 @@ p {
   margin: 0;
   color: #504f4f;
   font-size: 14px;
+}
+
+.fa-exclamation-circle {
+  color: #808080;
+  font-size: 15px;
 }
