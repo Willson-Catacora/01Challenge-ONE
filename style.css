@@ -161,10 +161,46 @@ p {
     gap: 10px;
     width: 100%;
   }
-  .button{
+  .button {
     width: 100%;
   }
   .hide-on-tablet {
-    display: none; 
+    display: none;
+  }
+}
+/* Celular */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 0;
+  }
+  .div1 {
+    padding-left: 10px;
+    margin-left: 25px;
+  }
+
+  .div2 {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+    margin: 0;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
   }
 }
