@@ -33,6 +33,7 @@ function Encriptar() {
   }
   console.log(texto.value);
   console.log(textoEncriptado);
+  limpiarTextarea();
 }
 function Desencriptar() {
   let textoDesencriptado = "";
@@ -92,4 +93,8 @@ function Desencriptar() {
   }
   console.log(texto.value);
   console.log(textoDesencriptado);
+  limpiarTextarea();
+}
+function limpiarTextarea() {
+  texto.value = "";
 }
