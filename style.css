@@ -36,8 +36,6 @@ header img {
 
 .div1 {
   flex: 3;
-  padding-left: 40px;
-  margin-right: 25px;
   display: flex;
 }
 
@@ -156,7 +154,8 @@ p {
   }
 
   .div1 {
-    padding-left: 10px;
+    margin: 10px;
+    padding: 20px;
     padding-bottom: 50px;
   }
 
@@ -174,11 +173,11 @@ p {
 @media (max-width: 480px) {
   .container {
     padding-left: 5px;
-    padding-right: 0;
+    padding-right: 5px;
   }
   .div1 {
-    padding-left: 10px;
-    margin-left: 25px;
+    padding: 10px;
+    margin: 10px;
   }
 
   .div2 {
@@ -206,4 +205,10 @@ p {
   p {
     font-size: 12px;
   }
+}
+
+#mensaje {
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgb(16, 3, 73);
 }

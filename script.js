@@ -103,19 +103,34 @@ function vaciarDiv(contenido) {
   div.prepend(nuevoTexto);
   // Creamos y agregamos div y el botón en la parte inferior
   const divAux = document.createElement('div');
+  const mensaje = document.createElement('div');
+  mensaje.id = 'mensaje';
   divAux.className = 'button';
   divAux.style.padding = '10px';
   divAux.style.margin = '10px';
+  divAux.style.paddingBottom = '0';
+  divAux.style.marginBottom = '0';
   const boton = document.createElement('button');
   boton.id = 'desencriptar';
   boton.style.margin = '0px';
   boton.textContent = 'Copiar';
-  boton.onclick = function() {
-      
-  };
+  divAux.appendChild(mensaje);
   divAux.appendChild(boton);
   div.appendChild(divAux);
   div.style.display = 'flex';
   textoEncriptado = "";
   textoDesencriptado = "";
+  boton.onclick = async function() {
+    try{
+      await navigator.clipboard.writeText(contenido);
+      mensaje.textContent = '¡Texto copiado al portapapeles!';
+    }catch(err){
+      console.error('Error al copiar al portapapeles:', err);
+      mensaje.textContent = 'Error al copiar al portapapeles.';
+    }
+    setTimeout(() => {
+      mensaje.textContent = '';
+      nuevoTexto.textContent = '';
+    }, 1000);
+  };
 }
