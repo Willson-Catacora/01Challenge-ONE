@@ -12,76 +12,80 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function Encriptar() {
   const textoOriginal = texto.value;
-  for (let i = 0; i < textoOriginal.length; i++) {
-    switch (textoOriginal[i]) {
-      case "a":
-        textoEncriptado += "ai";
-        break;
-      case "e":
-        textoEncriptado += "enter";
-        break;
-      case "i":
-        textoEncriptado += "imes";
-        break;
-      case "o":
-        textoEncriptado += "ober";
-        break;
-      case "u":
-        textoEncriptado += "ufat";
-        break;
-      default:
-        textoEncriptado += textoOriginal[i];
+  if(textoOriginal !== ""){
+    for (let i = 0; i < textoOriginal.length; i++) {
+      switch (textoOriginal[i]) {
+        case "a":
+          textoEncriptado += "ai";
+          break;
+        case "e":
+          textoEncriptado += "enter";
+          break;
+        case "i":
+          textoEncriptado += "imes";
+          break;
+        case "o":
+          textoEncriptado += "ober";
+          break;
+        case "u":
+          textoEncriptado += "ufat";
+          break;
+        default:
+          textoEncriptado += textoOriginal[i];
+      }
     }
+    console.log(texto.value);
+    console.log(textoEncriptado);
+    limpiarTextarea();
+    vaciarDiv(textoEncriptado);
   }
-  console.log(texto.value);
-  console.log(textoEncriptado);
-  limpiarTextarea();
-  vaciarDiv(textoEncriptado);
 }
 
 function Desencriptar() {
   const textoOriginal = texto.value;
-  for (let i = 0; i < textoOriginal.length; i++) {
-    switch (textoOriginal[i]) {
-      case "a":
-        if (textoOriginal[i + 1] === "i") {
-          textoDesencriptado += "a";
-          i++;
-        }
-        break;
-      case "e":
-        if (textoOriginal.substr(i, 5) === "enter") {
-          textoDesencriptado += "e";
-          i += 4;
-        }
-        break;
-      case "i":
-        if (textoOriginal.substr(i, 4) === "imes") {
-          textoDesencriptado += "i";
-          i += 3;
-        }
-        break;
-      case "o":
-        if (textoOriginal.substr(i, 4) === "ober") {
-          textoDesencriptado += "o";
-          i += 3;
-        }
-        break;
-      case "u":
-        if (textoOriginal.substr(i, 4) === "ufat") {
-          textoDesencriptado += "u";
-          i += 3;
-        }
-        break;
-      default:
-        textoDesencriptado += textoOriginal[i];
-        break;
+  if(textoOriginal !== ""){
+    for (let i = 0; i < textoOriginal.length; i++) {
+      switch (textoOriginal[i]) {
+        case "a":
+          if (textoOriginal[i + 1] === "i") {
+            textoDesencriptado += "a";
+            i++;
+          }
+          break;
+        case "e":
+          if (textoOriginal.substr(i, 5) === "enter") {
+            textoDesencriptado += "e";
+            i += 4;
+          }
+          break;
+        case "i":
+          if (textoOriginal.substr(i, 4) === "imes") {
+            textoDesencriptado += "i";
+            i += 3;
+          }
+          break;
+        case "o":
+          if (textoOriginal.substr(i, 4) === "ober") {
+            textoDesencriptado += "o";
+            i += 3;
+          }
+          break;
+        case "u":
+          if (textoOriginal.substr(i, 4) === "ufat") {
+            textoDesencriptado += "u";
+            i += 3;
+          }
+          break;
+        default:
+          textoDesencriptado += textoOriginal[i];
+          break;
+      }
     }
+    console.log(texto.value);
+    console.log(textoDesencriptado);
+    limpiarTextarea();
+    vaciarDiv(textoDesencriptado); 
   }
-  console.log(texto.value);
-  console.log(textoDesencriptado);
-  limpiarTextarea();
-  vaciarDiv(textoDesencriptado); 
 }
 
 function limpiarTextarea() {
@@ -89,14 +93,7 @@ function limpiarTextarea() {
 }
 
 function vaciarDiv(contenido) {
-  const img = div.querySelector("img");
-  const h3 = div.querySelector('h3');
-  const p = div.querySelector('p');
-  if (img  && h3 && p) {
-    img.remove();
-    h3.remove();
-    p.remove();
-  }
+  div.innerHTML = '';
   // Creamos y agregamos el nuevo texto en la parte superior
   const nuevoTexto = document.createElement('h2');
   nuevoTexto.textContent = contenido;
@@ -130,7 +127,6 @@ function vaciarDiv(contenido) {
     }
     setTimeout(() => {
       mensaje.textContent = '';
-      nuevoTexto.textContent = '';
     }, 1000);
   };
 }
